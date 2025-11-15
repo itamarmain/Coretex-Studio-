@@ -102,7 +102,7 @@
                         <i class="fas fa-moon text-gray-700 dark:text-gray-300 dark:hidden"></i>
                         <i class="fas fa-sun text-yellow-400 hidden dark:block"></i>
                     </button>
-                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition duration-300 font-medium hidden md:inline-flex items-center">
+                    <button onclick="window.open('https://discord.com/oauth2/authorize?client_id=1437471292621324444', '_blank')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition duration-300 font-medium hidden md:inline-flex items-center">
                         <i class="fas fa-robot mr-2"></i>
                         Invite Coretex
                     </button>
@@ -122,7 +122,7 @@
                     Coretex is a feature-rich Discord bot designed to enhance community engagement, streamline moderation, and add fun interactions to your server.
                 </p>
                 <div class="animate-fade-in" style="animation-delay: 0.4s;">
-                    <button class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex items-center mr-4">
+                    <button onclick="window.open('https://discord.com/oauth2/authorize?client_id=1437471292621324444', '_blank')" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex items-center mr-4">
                         <i class="fas fa-robot mr-2"></i>
                         Invite Coretex
                     </button>
@@ -619,7 +619,7 @@
                 Join thousands of servers that trust Coretex to enhance their community experience. It's free to get started!
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style="animation-delay: 0.4s;">
-                <button class="bg-white text-indigo-700 font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                <button onclick="window.open('https://discord.com/oauth2/authorize?client_id=1437471292621324444', '_blank')" class="bg-white text-indigo-700 font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex items-center justify-center">
                     <i class="fas fa-robot mr-2"></i>
                     Invite Coretex
                 </button>
@@ -749,6 +749,55 @@
         </div>
     </div>
 
+    <!-- Developer Access Section -->
+    <div id="dev-access" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button onclick="document.getElementById('dev-access').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 z-10 p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="p-8 pt-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">Developer Access</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-6">All custom bot quotes and client information are stored in our secure database.</p>
+                
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mb-6">
+                    <h4 class="font-bold text-lg mb-2">Access Instructions:</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><strong>Database:</strong> PostgreSQL hosted on secure server</li>
+                        <li><strong>Connection:</strong> SSH access with 2FA required</li>
+                        <li><strong>Location:</strong> Database file: <code>/data/quotes.json</code></li>
+                        <li><strong>API:</strong> Available at: <code>/api/quotes</code></li>
+                        <li><strong>Authentication:</strong> JWT tokens required for all requests</li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
+                        <h5 class="font-bold text-blue-800 dark:text-blue-200 mb-2">Quote Management</h5>
+                        <p class="text-blue-700 dark:text-blue-300 text-sm">
+                            To access quotes, use the admin panel at <code>https://admin.cortexstudios.com</code> 
+                            with your developer credentials. You can view, edit, and manage all client quotes.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700 rounded-lg p-4">
+                        <h5 class="font-bold text-green-800 dark:text-green-200 mb-2">Discord Invite Link</h5>
+                        <p class="text-green-700 dark:text-green-300 text-sm mb-2">
+                            Coretex Bot Invite Link:
+                        </p>
+                        <code class="bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded text-sm break-all">
+                            https://discord.com/oauth2/authorize?client_id=1437471292621324444
+                        </code>
+                    </div>
+                </div>
+                
+                <button onclick="document.getElementById('dev-access').classList.add('hidden')" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition duration-300">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
@@ -819,6 +868,15 @@
                     });
                 }
             });
+        });
+
+        // Developer access - for demo purposes only
+        // In a real application, this would be secured with proper authentication
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+                e.preventDefault();
+                document.getElementById('dev-access').classList.remove('hidden');
+            }
         });
     </script>
 </body>
