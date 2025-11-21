@@ -4,125 +4,238 @@
     <meta charset="UTF-8" />
     <title>Coretex Privacy Policy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====== STYLE ====== -->
     <style>
+        :root {
+            --bg: #111418;
+            --card-bg: #1a1f24;
+            --accent: #4aa8ff;
+            --text: #e7e7e7;
+            --subtext: #b5b5b5;
+            --radius: 14px;
+            --max-width: 950px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Inter", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #0f1317, #12171c);
+            border-bottom: 1px solid #222;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        header p {
+            margin-top: 15px;
+            color: var(--subtext);
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: var(--max-width);
             margin: auto;
-            padding: 40px;
-            line-height: 1.8;
+            padding: 30px 20px 80px;
         }
-        h1, h2, h3 {
-            color: #333;
-        }
+
         .section {
+            background-color: var(--card-bg);
+            padding: 30px 35px;
+            border-radius: var(--radius);
             margin-bottom: 35px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+            transition: transform 0.15s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #72c0ff;
+            margin-bottom: 8px;
+            margin-top: 22px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--subtext);
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+            background-color: #0e1114;
         }
     </style>
 </head>
+
 <body>
 
-<h1>Coretex Discord Bot – Privacy Policy</h1>
-<p><strong>Last Updated:</strong> 21 November 2025</p>
-<p><strong>Operated by Coretex Studios</strong></p>
+    <!-- ====== HEADER ====== -->
+    <header>
+        <h1>Coretex Privacy Policy</h1>
+        <p>Last Updated: 21 November 2025 • Operated by Coretex Studios</p>
+    </header>
 
-<div class="section">
-    <h2>1. Introduction</h2>
-    <p>Coretex ("the Bot") is developed by Coretex Studios. This Privacy Policy describes how we collect, use, and protect user information. By using the Bot, you agree to this policy.</p>
-</div>
+    <!-- ====== CONTENT ====== -->
+    <main>
 
-<div class="section">
-    <h2>2. Data We Collect</h2>
-    <h3>Automatically Collected:</h3>
-    <ul>
-        <li>Discord User IDs</li>
-        <li>Server IDs</li>
-        <li>Channel IDs</li>
-        <li>Message content (only for logs, tickets, moderation, or feature processing)</li>
-        <li>Interaction data (commands, button usage, events)</li>
-    </ul>
+        <div class="section">
+            <h2>1. Introduction</h2>
+            <p>
+                Coretex ("the Bot") is developed and maintained by Coretex Studios.
+                This Privacy Policy explains what data we collect, how it is used,
+                how it is protected, and what rights users have regarding their data.
+                By using Coretex, you agree to the terms described here.
+            </p>
+        </div>
 
-    <h3>User-Provided Data:</h3>
-    <ul>
-        <li>Server settings (prefix, mod role, logging channels)</li>
-        <li>User and guild preferences</li>
-        <li>Ticket information</li>
-        <li>Quotes and stored messages</li>
-    </ul>
-</div>
+        <div class="section">
+            <h2>2. Data We Collect</h2>
 
-<div class="section">
-    <h2>3. Why We Collect This Data</h2>
-    <ul>
-        <li>To operate bot features correctly</li>
-        <li>To provide moderation, ticketing, logging, and automation</li>
-        <li>To store preferences and configurations</li>
-        <li>To detect abuse and maintain bot stability</li>
-        <li>To debug and improve the Bot</li>
-    </ul>
-    <p>Data is never sold or shared with third parties.</p>
-</div>
+            <h3>Automatically Collected</h3>
+            <ul>
+                <li>Discord User IDs</li>
+                <li>Server IDs</li>
+                <li>Channel IDs</li>
+                <li>Message Content (only for moderation, logging, tickets, or features that require it)</li>
+                <li>Interaction data (commands, button clicks, event usage)</li>
+            </ul>
 
-<div class="section">
-    <h2>4. Data Storage & Retention</h2>
-    <ul>
-        <li>Logs and tickets are kept until deleted by server staff.</li>
-        <li>Server settings remain until modified or reset.</li>
-        <li>Temporary data is removed immediately after use.</li>
-        <li>Debug logs are retained short-term only.</li>
-    </ul>
-</div>
+            <h3>User-Provided Data</h3>
+            <ul>
+                <li>Server configuration (prefix, mod role, logging channels)</li>
+                <li>User & guild preferences</li>
+                <li>Ticket information</li>
+                <li>Quotes and stored messages</li>
+            </ul>
+        </div>
 
-<div class="section">
-    <h2>5. Who Has Access</h2>
-    <ul>
-        <li>Coretex Developers: itamar11_, ender_will_be</li>
-        <li>Server admins: access to their server’s data only</li>
-        <li>Hosting provider: technical access only</li>
-    </ul>
-</div>
+        <div class="section">
+            <h2>3. Why We Collect This Data</h2>
+            <ul>
+                <li>To operate bot features effectively</li>
+                <li>To provide moderation, ticketing, logging, and automation</li>
+                <li>To save server settings and preferences</li>
+                <li>To detect abuse and ensure bot stability</li>
+                <li>To debug errors and improve the bot</li>
+            </ul>
+            <p>We never sell or share your data with third parties.</p>
+        </div>
 
-<div class="section">
-    <h2>6. Data Protection</h2>
-    <ul>
-        <li>Encrypted cloud servers</li>
-        <li>Restricted developer access</li>
-        <li>Secure database environment</li>
-        <li>No storage of passwords or tokens</li>
-        <li>Regular internal security checks</li>
-    </ul>
-</div>
+        <div class="section">
+            <h2>4. Data Storage & Retention</h2>
+            <ul>
+                <li>Logs & tickets remain until deleted by server administrators</li>
+                <li>Server settings remain until changed or reset</li>
+                <li>Temporary processing data is deleted immediately</li>
+                <li>Debug logs are retained short-term only</li>
+            </ul>
+        </div>
 
-<div class="section">
-    <h2>7. User Rights</h2>
-    <h3>Access:</h3>
-    <p>Users may request a copy of the personal data stored about them.</p>
+        <div class="section">
+            <h2>5. Who Has Access</h2>
+            <ul>
+                <li>Coretex Developers — itamar11_, ender_will_be</li>
+                <li>Server admins — only for their own server’s data</li>
+                <li>Cloud hosting provider — technical access only</li>
+            </ul>
+        </div>
 
-    <h3>Deletion:</h3>
-    <p>Users may request deletion of their personal data.</p>
+        <div class="section">
+            <h2>6. Data Protection</h2>
+            <ul>
+                <li>Encrypted cloud servers</li>
+                <li>Limited developer access</li>
+                <li>Secure database infrastructure</li>
+                <li>No passwords or tokens are ever stored</li>
+                <li>Regular internal security checks</li>
+            </ul>
+        </div>
 
-    <h3>Opt-Out:</h3>
-    <p>Users may leave the server or ask admins to disable bot features.</p>
-</div>
+        <div class="section">
+            <h2>7. User Rights</h2>
 
-<div class="section">
-    <h2>8. Third-Party Services</h2>
-    <p>The Bot uses the official Discord API. Discord’s Terms and Privacy Policy apply to all platform interactions.</p>
-</div>
+            <h3>Access</h3>
+            <p>Users may request a copy of their personal data stored by the bot.</p>
 
-<div class="section">
-    <h2>9. Contact</h2>
-    <p>For questions or data requests:</p>
-    <ul>
-        <li>Discord: itamar11_, ender_will_be</li>
-        <li>Support Server: <a href="https://discord.gg/265h4EUA">https://discord.gg/265h4EUA</a></li>
-    </ul>
-</div>
+            <h3>Deletion</h3>
+            <p>Users may request deletion of their own personal data at any time.</p>
 
-<div class="section">
-    <h2>10. Updates</h2>
-    <p>We may update this policy as needed. Changes will be announced in the support server or repository.</p>
-</div>
+            <h3>Opt-Out</h3>
+            <p>Users may leave the server or request admins to disable the bot’s features.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Third-Party Services</h2>
+            <p>
+                Coretex uses the official Discord API.  
+                All interactions are subject to Discord's own Terms and Privacy Policy.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>9. Contact</h2>
+            <ul>
+                <li>Developers: itamar11_, ender_will_be</li>
+                <li>Support Server: <a href="https://discord.gg/265h4EUA">https://discord.gg/265h4EUA</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>10. Updates</h2>
+            <p>
+                We may update this policy periodically.  
+                Notices will be provided in the support server or project repository.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        © 2025 Coretex Studios • All Rights Reserved
+    </footer>
 
 </body>
 </html>
