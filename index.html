@@ -1,876 +1,128 @@
-# Coretex Studios - Discord Bot Landing Page
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coretex Studios - Custom Discord Bot Development</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        dark: {
-                            50: '#f9fafb',
-                            100: '#f3f4f6',
-                            200: '#e5e7eb',
-                            300: '#d1d5db',
-                            400: '#9ca3af',
-                            500: '#6b7280',
-                            600: '#4b5563',
-                            700: '#374151',
-                            800: '#1f2937',
-                            900: '#111827',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <meta charset="UTF-8" />
+    <title>Coretex Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            line-height: 1.8;
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        h1, h2, h3 {
+            color: #333;
         }
-        .dark .gradient-bg {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-        }
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .command-card {
-            transition: all 0.2s ease;
-        }
-        .command-card:hover {
-            background-color: #f8fafc;
-            transform: translateX(4px);
-        }
-        .dark .command-card:hover {
-            background-color: #1f2937;
-        }
-        .feature-icon {
-            transition: all 0.3s ease;
-        }
-        .feature-icon:hover {
-            transform: scale(1.1);
-        }
-        .pricing-card {
-            transition: all 0.3s ease;
-        }
-        .pricing-card:hover {
-            transform: translateY(-8px);
-        }
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+        .section {
+            margin-bottom: 35px;
         }
     </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center">
-                    <i class="fas fa-robot text-indigo-600 dark:text-indigo-400 text-xl mr-2"></i>
-                    <span class="ml-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
-                        Coretex Studios
-                    </span>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon text-gray-700 dark:text-gray-300 dark:hidden"></i>
-                        <i class="fas fa-sun text-yellow-400 hidden dark:block"></i>
-                    </button>
-                    <button onclick="window.open('https://discord.com/oauth2/authorize?client_id=1437471292621324444', '_blank')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition duration-300 font-medium hidden md:inline-flex items-center">
-                        <i class="fas fa-robot mr-2"></i>
-                        Invite Coretex
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in">
-                    Power Your Discord Server
-                </h1>
-                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg animate-fade-in" style="animation-delay: 0.2s;">
-                    Coretex is a feature-rich Discord bot designed to enhance community engagement, streamline moderation, and add fun interactions to your server.
-                </p>
-                <div class="animate-fade-in" style="animation-delay: 0.4s;">
-                    <button onclick="window.open('https://discord.com/oauth2/authorize?client_id=1437471292621324444', '_blank')" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex items-center mr-4">
-                        <i class="fas fa-robot mr-2"></i>
-                        Invite Coretex
-                    </button>
-                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex items-center">
-                        <i class="fas fa-handshake mr-2"></i>
-                        Custom Bot
-                    </button>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl w-full max-w-md aspect-square flex items-center justify-center p-8 animate-fade-in" style="animation-delay: 0.3s;">
-                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 w-4/5 h-4/5 flex flex-col items-center justify-center border border-white/30">
-                        <i class="fas fa-robot text-white text-4xl mb-4"></i>
-                        <p class="text-white font-medium text-center">Coretex Bot Interface</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<h1>Coretex Discord Bot – Privacy Policy</h1>
+<p><strong>Last Updated:</strong> 21 November 2025</p>
+<p><strong>Operated by Coretex Studios</strong></p>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in">
-                About Coretex Studios
-            </h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
-                We're a team of passionate developers dedicated to creating high-quality Discord bots that enhance server experiences. Our mission is to provide reliable, feature-rich solutions that are both powerful and easy to use.
-            </p>
-            <div class="mt-8 bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-200 dark:border-indigo-700 rounded-xl p-6 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.4s;">
-                <p class="text-gray-800 dark:text-indigo-200 italic">
-                    "We recently built a custom bot for a 200-member community server featuring a comprehensive ticket system, automated welcome messages, and detailed invite tracking - all while maintaining peak performance."
-                </p>
-            </div>
-        </div>
-    </section>
+<div class="section">
+    <h2>1. Introduction</h2>
+    <p>Coretex ("the Bot") is developed by Coretex Studios. This Privacy Policy describes how we collect, use, and protect user information. By using the Bot, you agree to this policy.</p>
+</div>
 
-    <!-- Portfolio Section -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12 animate-fade-in">
-                Our Projects
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer border border-gray-200 dark:border-gray-700 card-hover animate-fade-in" style="animation-delay: 0.1s;">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://placehold.co/600x400/6366f1/white?text=Coretex+Bot" alt="Coretex Bot" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Coretex Bot</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">A multi-purpose Discord bot with leveling, moderation, and fun commands.</p>
-                        <div class="flex items-center text-indigo-600 dark:text-indigo-400 font-medium">
-                            <span>Learn More</span>
-                            <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300 group-hover:translate-y-1"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer border border-gray-200 dark:border-gray-700 card-hover animate-fade-in" style="animation-delay: 0.2s;">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://placehold.co/600x400/8b5cf6/white?text=Ticket+System" alt="Ticket System" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Ticket System</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Custom ticket system for server support.</p>
-                        <div class="flex items-center text-indigo-600 dark:text-indigo-400 font-medium">
-                            <span>Learn More</span>
-                            <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300 group-hover:translate-y-1"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer border border-gray-200 dark:border-gray-700 card-hover animate-fade-in" style="animation-delay: 0.3s;">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://placehold.co/600x400/a855f7/white?text=Verification+Bot" alt="Verification Bot" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Verification Bot</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced verification system to keep your server safe.</p>
-                        <div class="flex items-center text-indigo-600 dark:text-indigo-400 font-medium">
-                            <span>Learn More</span>
-                            <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300 group-hover:translate-y-1"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="section">
+    <h2>2. Data We Collect</h2>
+    <h3>Automatically Collected:</h3>
+    <ul>
+        <li>Discord User IDs</li>
+        <li>Server IDs</li>
+        <li>Channel IDs</li>
+        <li>Message content (only for logs, tickets, moderation, or feature processing)</li>
+        <li>Interaction data (commands, button usage, events)</li>
+    </ul>
 
-    <!-- Custom Bot Services Section -->
-    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12 animate-fade-in">
-                Custom Discord Bot Development
-            </h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
-                Need a custom solution? We specialize in creating tailored Discord bots for businesses, communities, and organizations. Our expert team will build exactly what you need.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.3s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-code h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Custom Development</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Fully customized bots built to your exact specifications with any features you need.</p>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.4s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-bolt h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Fast Delivery</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Quick turnaround times with our experienced development team.</p>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.5s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-headset h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Ongoing Support</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Continuous maintenance and support to keep your bot running smoothly.</p>
-                </div>
-            </div>
+    <h3>User-Provided Data:</h3>
+    <ul>
+        <li>Server settings (prefix, mod role, logging channels)</li>
+        <li>User and guild preferences</li>
+        <li>Ticket information</li>
+        <li>Quotes and stored messages</li>
+    </ul>
+</div>
 
-            <!-- Pricing Section -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="pricing-card bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md border border-gray-200 dark:border-gray-700 group">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Starter</h3>
-                    <div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">$299</div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Basic custom bot with core features</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Up to 5 commands</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Basic moderation</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 1 month support</li>
-                    </ul>
-                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg transition duration-300">
-                        Get Started
-                    </button>
-                </div>
-                
-                <div class="pricing-card bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-2xl p-8 shadow-lg border-2 border-indigo-400 transform scale-105 pulse">
-                    <div class="text-center mb-4">
-                        <span class="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">POPULAR</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Professional</h3>
-                    <div class="text-3xl font-bold mb-4">$599</div>
-                    <p class="mb-4">Advanced bot with custom features and integrations</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-white mr-2"></i> Up to 15 commands</li>
-                        <li class="flex items-center"><i class="fas fa-check text-white mr-2"></i> Advanced moderation</li>
-                        <li class="flex items-center"><i class="fas fa-check text-white mr-2"></i> Database integration</li>
-                        <li class="flex items-center"><i class="fas fa-check text-white mr-2"></i> 3 months support</li>
-                    </ul>
-                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="w-full bg-white text-indigo-600 font-bold py-3 rounded-lg transition duration-300 hover:bg-gray-100">
-                        Get Started
-                    </button>
-                </div>
-                
-                <div class="pricing-card bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md border border-gray-200 dark:border-gray-700 group">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Enterprise</h3>
-                    <div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">Custom</div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Full-featured solution with unlimited capabilities</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited commands</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Advanced integrations</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Multi-server support</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Ongoing development</li>
-                    </ul>
-                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg transition duration-300">
-                        Get Quote
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="section">
+    <h2>3. Why We Collect This Data</h2>
+    <ul>
+        <li>To operate bot features correctly</li>
+        <li>To provide moderation, ticketing, logging, and automation</li>
+        <li>To store preferences and configurations</li>
+        <li>To detect abuse and maintain bot stability</li>
+        <li>To debug and improve the Bot</li>
+    </ul>
+    <p>Data is never sold or shared with third parties.</p>
+</div>
 
-    <!-- Commands Section -->
-    <section id="commands" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12 animate-fade-in">
-                Coretex Bot Commands
-            </h2>
-            <div class="space-y-4">
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 animate-fade-in" style="animation-delay: 0.1s;">
-                    <button onclick="toggleAccordion('community')" class="w-full flex justify-between items-center p-5 text-left font-bold text-lg text-gray-900 dark:text-white bg-gradient-to-r from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/30 dark:to-purple-900/30 hover:bg-indigo-50/80 dark:hover:bg-indigo-900/50 transition-colors">
-                        <span>Community Features</span>
-                        <i class="fas fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-300 accordion-icon" id="icon-community"></i>
-                    </button>
-                    <div id="content-community" class="hidden p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/leaderboard</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Show the server leaderboard for levels.</p>
-                            <button onclick="copyCommand('/leaderboard')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/rank</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Check your current level and rank in the server.</p>
-                            <button onclick="copyCommand('/rank')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/tickets</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Manage ticket channels and settings.</p>
-                            <button onclick="copyCommand('/tickets')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/events</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">List upcoming server events.</p>
-                            <button onclick="copyCommand('/events')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<div class="section">
+    <h2>4. Data Storage & Retention</h2>
+    <ul>
+        <li>Logs and tickets are kept until deleted by server staff.</li>
+        <li>Server settings remain until modified or reset.</li>
+        <li>Temporary data is removed immediately after use.</li>
+        <li>Debug logs are retained short-term only.</li>
+    </ul>
+</div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 animate-fade-in" style="animation-delay: 0.2s;">
-                    <button onclick="toggleAccordion('essential')" class="w-full flex justify-between items-center p-5 text-left font-bold text-lg text-gray-900 dark:text-white bg-gradient-to-r from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/30 dark:to-purple-900/30 hover:bg-indigo-50/80 dark:hover:bg-indigo-900/50 transition-colors">
-                        <span>Essential</span>
-                        <i class="fas fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-300 accordion-icon" id="icon-essential"></i>
-                    </button>
-                    <div id="content-essential" class="hidden p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/help</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Show the help menu.</p>
-                            <button onclick="copyCommand('/help')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/ping</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Check the bot's latency.</p>
-                            <button onclick="copyCommand('/ping')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/invite</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Get the bot invite link.</p>
-                            <button onclick="copyCommand('/invite')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/support</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Get a link to the support server.</p>
-                            <button onclick="copyCommand('/support')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<div class="section">
+    <h2>5. Who Has Access</h2>
+    <ul>
+        <li>Coretex Developers: itamar11_, ender_will_be</li>
+        <li>Server admins: access to their server’s data only</li>
+        <li>Hosting provider: technical access only</li>
+    </ul>
+</div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 animate-fade-in" style="animation-delay: 0.3s;">
-                    <button onclick="toggleAccordion('fun')" class="w-full flex justify-between items-center p-5 text-left font-bold text-lg text-gray-900 dark:text-white bg-gradient-to-r from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/30 dark:to-purple-900/30 hover:bg-indigo-50/80 dark:hover:bg-indigo-900/50 transition-colors">
-                        <span>Fun</span>
-                        <i class="fas fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-300 accordion-icon" id="icon-fun"></i>
-                    </button>
-                    <div id="content-fun" class="hidden p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/meme</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Get a random meme.</p>
-                            <button onclick="copyCommand('/meme')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/joke</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Tell a random joke.</p>
-                            <button onclick="copyCommand('/joke')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/8ball</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Ask the magic 8-ball a question.</p>
-                            <button onclick="copyCommand('/8ball')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/roll</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Roll a dice.</p>
-                            <button onclick="copyCommand('/roll')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<div class="section">
+    <h2>6. Data Protection</h2>
+    <ul>
+        <li>Encrypted cloud servers</li>
+        <li>Restricted developer access</li>
+        <li>Secure database environment</li>
+        <li>No storage of passwords or tokens</li>
+        <li>Regular internal security checks</li>
+    </ul>
+</div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 animate-fade-in" style="animation-delay: 0.4s;">
-                    <button onclick="toggleAccordion('moderation')" class="w-full flex justify-between items-center p-5 text-left font-bold text-lg text-gray-900 dark:text-white bg-gradient-to-r from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/30 dark:to-purple-900/30 hover:bg-indigo-50/80 dark:hover:bg-indigo-900/50 transition-colors">
-                        <span>Moderation</span>
-                        <i class="fas fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-300 accordion-icon" id="icon-moderation"></i>
-                    </button>
-                    <div id="content-moderation" class="hidden p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/ban</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Ban a user from the server.</p>
-                            <button onclick="copyCommand('/ban')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/kick</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Kick a user from the server.</p>
-                            <button onclick="copyCommand('/kick')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/mute</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Mute a user for a specified time.</p>
-                            <button onclick="copyCommand('/mute')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/warn</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Warn a user.</p>
-                            <button onclick="copyCommand('/warn')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<div class="section">
+    <h2>7. User Rights</h2>
+    <h3>Access:</h3>
+    <p>Users may request a copy of the personal data stored about them.</p>
 
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 animate-fade-in" style="animation-delay: 0.5s;">
-                    <button onclick="toggleAccordion('utility')" class="w-full flex justify-between items-center p-5 text-left font-bold text-lg text-gray-900 dark:text-white bg-gradient-to-r from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/30 dark:to-purple-900/30 hover:bg-indigo-50/80 dark:hover:bg-indigo-900/50 transition-colors">
-                        <span>Utility</span>
-                        <i class="fas fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-300 accordion-icon" id="icon-utility"></i>
-                    </button>
-                    <div id="content-utility" class="hidden p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/weather</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Get weather information for a city.</p>
-                            <button onclick="copyCommand('/weather')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/define</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Get the definition of a word.</p>
-                            <button onclick="copyCommand('/define')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/translate</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Translate text to another language.</p>
-                            <button onclick="copyCommand('/translate')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                        <div class="command-card flex items-start py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                            <code class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg mr-4 flex-shrink-0 font-mono text-sm">/remind</code>
-                            <p class="text-gray-700 dark:text-gray-300 flex-grow">Set a reminder for yourself or others.</p>
-                            <button onclick="copyCommand('/remind')" class="p-1.5 rounded-lg transition-colors text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <i class="fas fa-copy text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <h3>Deletion:</h3>
+    <p>Users may request deletion of their personal data.</p>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12 animate-fade-in">
-                Key Features
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.1s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-users h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Leveling System</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Reward active members with XP and levels. Display leaderboards and customize rewards.</p>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.2s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-comments h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Ticket System</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Create support tickets with custom categories, staff assignment, and automated transcript generation.</p>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.3s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-shield-alt h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Verification</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Secure your server with captcha, reaction-based, or rule acceptance verification methods.</p>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.4s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-cog h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Moderation Tools</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Comprehensive tools including ban, kick, mute, warn, and detailed logging with automatic actions.</p>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.5s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-star h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Fun Commands</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Entertain your community with memes, jokes, games, and interactive commands.</p>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 dark:border-gray-700 group card-hover animate-fade-in" style="animation-delay: 0.6s;">
-                    <div class="mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 feature-icon">
-                        <i class="fas fa-robot h-6 w-6 text-indigo-600 dark:text-indigo-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Utilities</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Practical tools like weather forecasts, translation, reminders, and information lookups.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <h3>Opt-Out:</h3>
+    <p>Users may leave the server or ask admins to disable bot features.</p>
+</div>
 
-    <!-- Testimonials Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in">
-                What Our Users Say
-            </h2>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
-                Join hundreds of servers that have transformed their community with Coretex
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 animate-fade-in" style="animation-delay: 0.3s;">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-gradient-to-r from-yellow-400 to-amber-500 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
-                            1
-                        </div>
-                        <div>
-                            <p class="text-lg font-semibold text-gray-900 dark:text-white">Server Owner #1</p>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300 italic">
-                        "Coretex completely transformed our community experience. The leveling system keeps members engaged, and the moderation tools have saved us countless hours of manual work. The support team is incredibly responsive!"
-                    </p>
-                </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 animate-fade-in" style="animation-delay: 0.4s;">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-gradient-to-r from-yellow-400 to-amber-500 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
-                            2
-                        </div>
-                        <div>
-                            <p class="text-lg font-semibold text-gray-900 dark:text-white">Server Owner #2</p>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300 italic">
-                        "The ticket system alone has been a game-changer for our community. No more chaos when people need help - everything is organized and efficient. Coretex has exceeded our expectations!"
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="section">
+    <h2>8. Third-Party Services</h2>
+    <p>The Bot uses the official Discord API. Discord’s Terms and Privacy Policy apply to all platform interactions.</p>
+</div>
 
-    <!-- CTA Section -->
-    <section id="support" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
-                Ready to Transform Your Server?
-            </h2>
-            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
-                Join thousands of servers that trust Coretex to enhance their community experience. It's free to get started!
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style="animation-delay: 0.4s;">
-                <button onclick="window.open('https://discord.com/oauth2/authorize?client_id=1437471292621324444', '_blank')" class="bg-white text-indigo-700 font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex items-center justify-center">
-                    <i class="fas fa-robot mr-2"></i>
-                    Invite Coretex
-                </button>
-                <button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="bg-black/20 backdrop-blur-sm border border-white/30 hover:bg-white/10 text-white font-bold py-4 px-8 rounded-xl text-lg transition duration-300">
-                    <i class="fas fa-handshake mr-2"></i>
-                    Custom Bot
-                </button>
-            </div>
-        </div>
-    </section>
+<div class="section">
+    <h2>9. Contact</h2>
+    <p>For questions or data requests:</p>
+    <ul>
+        <li>Discord: itamar11_, ender_will_be</li>
+        <li>Support Server: <a href="https://discord.gg/265h4EUA">https://discord.gg/265h4EUA</a></li>
+    </ul>
+</div>
 
-    <!-- Footer -->
-    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900 text-gray-300">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-robot text-indigo-400 text-xl mr-2"></i>
-                        <span class="ml-2 text-xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
-                            Coretex Studios
-                        </span>
-                    </div>
-                    <p class="text-gray-400 mb-4 max-w-xs">
-                        Building powerful Discord bots to enhance community engagement and server management since 2022.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors p-2 bg-gray-800 rounded-full">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors p-2 bg-gray-800 rounded-full">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors p-2 bg-gray-800 rounded-full">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors p-2 bg-gray-800 rounded-full">
-                            <i class="fas fa-server"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-white font-bold mb-4 text-lg">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-indigo-400 transition-colors block py-1">Home</a></li>
-                        <li><a href="#about" class="hover:text-indigo-400 transition-colors block py-1">About</a></li>
-                        <li><a href="#projects" class="hover:text-indigo-400 transition-colors block py-1">Projects</a></li>
-                        <li><a href="#services" class="hover:text-indigo-400 transition-colors block py-1">Custom Bots</a></li>
-                        <li><a href="#commands" class="hover:text-indigo-400 transition-colors block py-1">Commands</a></li>
-                        <li><a href="#features" class="hover:text-indigo-400 transition-colors block py-1">Features</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-white font-bold mb-4 text-lg">Support</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-indigo-400 transition-colors block py-1">Documentation</a></li>
-                        <li><a href="#" class="hover:text-indigo-400 transition-colors block py-1">FAQ</a></li>
-                        <li><a href="#" class="hover:text-indigo-400 transition-colors block py-1">Report a Bug</a></li>
-                        <li><a href="#" class="hover:text-indigo-400 transition-colors block py-1">Feature Request</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-white font-bold mb-4 text-lg">Contact</h3>
-                    <p class="mb-2 flex items-center">
-                        <i class="fas fa-envelope mr-2 text-indigo-400"></i>
-                        contact@cortexstudios.com
-                    </p>
-                    <p class="mb-4">Join our support server for help and updates:</p>
-                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition duration-300 w-full font-medium">
-                        <i class="fas fa-handshake mr-2"></i>
-                        Get Custom Quote
-                    </button>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 Coretex Studios. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<div class="section">
+    <h2>10. Updates</h2>
+    <p>We may update this policy as needed. Changes will be announced in the support server or repository.</p>
+</div>
 
-    <!-- Contact Modal -->
-    <div id="contact-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto relative">
-            <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 z-10 p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <div class="p-8 pt-12">
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">Get Custom Bot Quote</h3>
-                <p class="text-gray-700 dark:text-gray-300 mb-6">Tell us about your requirements and we'll provide a custom quote.</p>
-                
-                <form id="contact-form" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-                        <input type="text" name="name" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                        <input type="email" name="email" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Server Size</label>
-                        <select name="serverSize" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
-                            <option>Under 100 members</option>
-                            <option>100-500 members</option>
-                            <option>500-1000 members</option>
-                            <option>1000+ members</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Requirements</label>
-                        <textarea name="requirements" rows="4" placeholder="Describe your bot requirements..." class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"></textarea>
-                    </div>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button type="button" onclick="document.getElementById('contact-modal').classList.add('hidden')" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white px-6 py-3 rounded-xl transition duration-300 font-medium">
-                            Cancel
-                        </button>
-                        <button type="submit" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-xl transition duration-300 font-medium">
-                            Get Quote
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script>
-      // GitHub repo details - REPLACE THESE!
-      const GITHUB_REPO_OWNER = 'itamarmain'; // Replace with your GitHub username
-      const GITHUB_REPO_NAME = 'coretex-quotes';        // Replace with your GitHub repo name
-      const GITHUB_TOKEN = ''; // Optional: leave empty if not using token
-
-      function toggleDarkMode() {
-        document.documentElement.classList.toggle('dark');
-        const isDark = document.documentElement.classList.contains('dark');
-        localStorage.setItem('darkMode', isDark);
-      }
-
-      function toggleAccordion(category) {
-        const content = document.getElementById(`content-${category}`);
-        const icon = document.getElementById(`icon-${category}`);
-        
-        if (content.classList.contains('hidden')) {
-          content.classList.remove('hidden');
-          icon.classList.remove('fa-chevron-down');
-          icon.classList.add('fa-chevron-up');
-        } else {
-          content.classList.add('hidden');
-          icon.classList.remove('fa-chevron-up');
-          icon.classList.add('fa-chevron-down');
-        }
-      }
-
-      function copyCommand(command) {
-        navigator.clipboard.writeText(command).then(() => {
-          const button = event.target.closest('button');
-          const originalIcon = button.innerHTML;
-          button.innerHTML = '<i class="fas fa-check text-green-500"></i>';
-          setTimeout(() => {
-            button.innerHTML = originalIcon;
-          }, 2000);
-        });
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        const storedDarkMode = localStorage.getItem('darkMode');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (storedDarkMode !== null) {
-          if (storedDarkMode === 'true') {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
-        } else if (prefersDark) {
-          document.documentElement.classList.add('dark');
-        }
-
-        // Handle form submission using GitHub Issues
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
-          e.preventDefault();
-
-          const formData = new FormData(this);
-          const quote = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            serverSize: formData.get('serverSize'),
-            requirements: formData.get('requirements'),
-            timestamp: new Date().toISOString()
-          };
-
-          const title = `New Quote: ${quote.name} (${quote.serverSize})`;
-          const body = `
-**Name**: ${quote.name}
-**Email**: ${quote.email}
-**Server Size**: ${quote.serverSize}
-**Requirements**:
-\`\`\`
-${quote.requirements}
-\`\`\`
-**Submitted**: ${quote.timestamp}
-          `.trim();
-
-          try {
-            const response = await fetch(`https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/issues`, {
-              method: 'POST',
-              headers: {
-                'Authorization': GITHUB_TOKEN ? `token ${GITHUB_TOKEN}` : '',
-                'Accept': 'application/vnd.github.v3+json',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                title,
-                body
-              })
-            });
-
-            if (response.ok) {
-              const issue = await response.json();
-              alert('Thank you! Your quote request has been submitted successfully.\n\nYou can view all quotes at:\nhttps://github.com/' + GITHUB_REPO_OWNER + '/' + GITHUB_REPO_NAME + '/issues');
-              this.reset();
-              document.getElementById('contact-modal').classList.add('hidden');
-            } else {
-              throw new Error('Failed to submit quote');
-            }
-          } catch (error) {
-            console.error('Error:', error);
-            alert('There was a problem submitting your quote. Please contact us directly at contact@cortexstudios.com');
-          }
-        });
-      });
-
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-    </script>
 </body>
 </html>
-```
